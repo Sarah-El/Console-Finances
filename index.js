@@ -87,3 +87,20 @@ var finances = [
 ['Feb-2017', 671099]
 ];
 
+console.log("Financial Analysis");
+console.log("---------------------------");
+console.log("Total months: " + finances.length);
+
+var sum = 0; // 3217391893718
+
+// i 0 1 2
+for (var i = 0; i < finances.length; i++) {
+  var currentMonthAndSale = finances[i]; // finances[1] => ["Feb-2010", 984655]
+//   console.log(currentMonthAndSale);
+  var currentSale = currentMonthAndSale[1];
+//   console.log(currentSale);
+  sum = sum + currentSale;
+}
+console.log("Total: £", sum);
+var average = sum / finances.length;
+console.log(average);
