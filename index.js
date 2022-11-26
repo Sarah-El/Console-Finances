@@ -102,5 +102,7 @@ for (var i = 0; i < finances.length; i++) {
   sum = sum + currentSale;
 }
 console.log("Total: £", sum);
-var average = sum / finances.length;
+
+var average = (Math.round(sum / finances.length));
 console.log(average);
+
