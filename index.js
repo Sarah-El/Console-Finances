@@ -95,24 +95,67 @@ console.log("Total months: " + finances.length);
 
 // total profit
 var sum = 0; 
+var profitEachMonth = [];
 
 for (var i = 0; i < finances.length; i++) {
   var monthProfit = finances[i]; // picks out each array line index
   var justProfit = monthProfit[1]; // picks out the number only
   sum = sum + justProfit;
+  profitEachMonth.push(justProfit);
+//   console.log(justProfit);
 }
 console.log("Total: £", sum);
+// console.log(profitEachMonth)
 
 // average changes in profit/losses
 
-for (i = 0; i < finances.length; i++) {
-    var monthOne = monthProfit[1];
-    for (j = i + 1; j < finances.length;  j++) {
-        var monthTwo = monthProfit[1];
-        }
+// var financeFigures = finances[1];
+// console.log(financeFigures);
+
+var monthDiff = []
+// var sumofDiff = 0
+
+for (i = 0; i < profitEachMonth.length; i++) {
+    var monthOne = profitEachMonth[i];
+    var monthTwo = profitEachMonth[i+1];
     var difference = monthOne - monthTwo;
-    console.log(difference);
+    // console.log(difference); 
+    monthDiff.push(difference);
+ 
+    // sum = sumofDiff + difference;
+    // console.log(sum)
+    // average = (Math.round(average / difference));
+    // console.log(average);
 }
+
+
+// function difference[i] {
+//     var sumOf = 0;
+//     for(var i = 0; i < difference.length; i++) {
+//         sumOf = sumOf + (difference);
+//         console.log(sumOf);
+//     }
+// }
+
+// var sumOf = 0
+
+for (var i = 0; i < difference.length; i++) {
+    var profit = difference[i];
+    sumOf = sum + difference;
+    console.log(sumOf);
+}
+
+    
+        // console.log(monthOne);
+        // console.log(monthTwo);
+        // console.log(difference);
+
+    // console.log(monthOne);
+    //     console.log(monthTwo);
+    //     console.log(difference);
+
+
+
 
 // for (i = 0; i < finances.length; i++) {
 //         var monthOne = monthProfit[1];
