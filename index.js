@@ -89,20 +89,76 @@ var finances = [
 
 console.log("Financial Analysis");
 console.log("---------------------------");
+
+// amount of months
 console.log("Total months: " + finances.length);
 
-var sum = 0; // 3217391893718
+// total profit
+var sum = 0; 
 
-// i 0 1 2
 for (var i = 0; i < finances.length; i++) {
-  var currentMonthAndSale = finances[i]; // finances[1] => ["Feb-2010", 984655]
-//   console.log(currentMonthAndSale);
-  var currentSale = currentMonthAndSale[1];
-//   console.log(currentSale);
-  sum = sum + currentSale;
+  var monthProfit = finances[i]; // picks out each array line index
+  var justProfit = monthProfit[1]; // picks out the number only
+  sum = sum + justProfit;
 }
 console.log("Total: £", sum);
 
-var average = (Math.round(sum / finances.length));
-console.log(average);
+// average changes in profit/losses
 
+for (i = 0; i < finances.length; i++) {
+    var monthOne = monthProfit[1];
+    for (j = i + 1; j < finances.length;  j++) {
+        var monthTwo = monthProfit[1];
+        }
+    var difference = monthOne - monthTwo;
+    console.log(difference);
+}
+
+// for (i = 0; i < finances.length; i++) {
+//         var monthOne = monthProfit[1];
+//             for (j = i + 1; j < finances.length;  j++) {
+//                 var monthTwo = monthProfit[1];
+//             }
+//         var difference = monthOne - monthTwo;
+//         console.log(difference);
+// }
+
+// var avChange = 0
+
+// for (i = 0; i < finances.length; i++) {
+//     for (j = i + 1; j < finances.length;  j++) {
+//         var monthOne = finances[i];
+//         var monthTwo = finances[j];
+//         var difference = monthOne - monthTwo;
+//         console.log(difference);
+//     }
+// }
+
+// var maxDiff = finances[i];
+    // var monthByMonth = monthProfit[1] + 
+// console.log(maxDiff)
+
+// var average = 0;
+
+// for (i = 0; i < finances.length; i++){
+//     average = (Math.round(average / finances.length));
+//     console.log(average);
+// }
+// console.log(average);
+
+
+
+
+// var average = (Math.round(sum / finances.length));
+// console.log(average);
+
+// var averageDifference = finances.map(function (v, i, finances) {
+//     return (i==0 ? 0 : finances[i-1]) - finances[1];
+// })
+
+// console.log(finances.map)
+
+
+// const result1 = money.map(function(v, i, money) {
+//     return (i==0 ? 0 : money[i-1]) - money[i]
+// })
