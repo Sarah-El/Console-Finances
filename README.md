@@ -30,3 +30,4 @@ Please refer to the licence in the repo
 https://sarah-el.github.io/console-finances
 
 ## Screenshots
+![image](https://user-images.githubusercontent.com/117095370/204275321-1d66f2de-fe5b-473d-bc35-33ec87fb5c4e.png)
