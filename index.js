@@ -88,10 +88,6 @@ var finances = [
 ];
 
 
-
-
-
-
 console.log("Financial Analysis");
 console.log("---------------------------");
 
@@ -100,16 +96,13 @@ console.log("Total months: " + finances.length);
 
 // total profit
 var sum = 0; 
-// var profitEachMonth = [];
 
 for (var i = 0; i < finances.length; i++) {
   var monthProfit = finances[i]; // picks out each array line index
   var justProfit = monthProfit[1]; // picks out the number only
   sum = sum + justProfit;
-//   profitEachMonth.push(justProfit);
-//   console.log(justProfit);
 }
-console.log("Total: £", sum);
+console.log("Total: $" + sum);
 
 //average changes in profit/losses
 
@@ -124,19 +117,33 @@ for (var i = 1; i < finances.length; i++) {
 var averageDiff = 0;
 for (i = 1; i < monthlyDiff.length; i++ ) {
     averageDiff += monthlyDiff[i];
+
 }
 
 var averageTotalDiff = (averageDiff / finances.length);
 
 console.log("Average Change: £ " + averageTotalDiff.toFixed(2));
 
+// Greatest increase and decrease in profits
 
+var greatestIncrease = 0;
+var largestMonth;
+var greatestDecrease = 0;
+var largestLossMonth;
 
+for (i = 0; i <monthlyDiff.length; i++ ) {
+    if (monthlyDiff[i] > greatestIncrease){
+        greatestIncrease = monthlyDiff[i];
+        largestMonth = finances [i][0];
+    }
+    if (monthlyDiff[i] < greatestDecrease){
+        greatestDecrease = monthlyDiff[i];
+        largestLossMonth = finances [i][0];
+    }
+    
+}
+var greatestTotalIncrease = (largestMonth + " " + "($" + greatestIncrease +")");
+    console.log("Greatest Increase in Profits: " + greatestTotalIncrease);
 
-
-
-
-
-
-
-
+var greatestTotalDecrease = (largestLossMonth + " " + "($" + greatestDecrease +")");
+    console.log("Greatest Decrease in Profits: " + greatestTotalDecrease);
